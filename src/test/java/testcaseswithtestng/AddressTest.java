@@ -6,9 +6,9 @@ import org.testng.annotations.Test;
 
 public class AddressTest extends BaseTest{
 	@Test
-	public void verifyAddingAddress(String location) {
+	public void verifyAddingAddress() {
 		AddressPage addressPage = new AddressPage();
-		addressPage.addAddress(location);
+		addressPage.addAddress("Pune");
 	}
 	
 }

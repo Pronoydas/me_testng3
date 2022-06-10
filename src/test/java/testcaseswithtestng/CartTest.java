@@ -10,9 +10,9 @@ import pages.CartPage;
 public class CartTest extends BaseTest{
 	
 	@Test
-	public void verifyMovingPrdToWishList(String productName) {
+	public void verifyMovingPrdToWishList() {
 		CartPage cartpage = new CartPage();
-		cartpage.moveProductToWishList(productName);
+		cartpage.moveProductToWishList("IPhone-13");
 	}
 	
 	@Test
