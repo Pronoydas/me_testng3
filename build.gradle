@@ -51,8 +51,17 @@ test {
             }
     }
 
+    testLogging {
+		events "PASSED", "SKIPPED", "FAILED", "STANDARD_OUT", "STANDARD_ERROR"
+        exceptionFormat = 'full'
+
+        // Optionally do:
+        showStackTraces = true
+	}
+
     testLogging.showStandardStreams = true
     test.outputs.upToDateWhen {false}
+
 }
 
 mainClassName = 'testNG_1.Library'
