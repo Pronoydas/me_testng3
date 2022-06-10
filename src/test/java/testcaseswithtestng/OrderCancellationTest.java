@@ -11,10 +11,9 @@ import pages.OrderCancellationPage;
 public class OrderCancellationTest extends BaseTest{
 	
 	@Test
-	@Parameters({"OrderId"})
-	public void verifyProductCancellation(@Optional("order_987684") String OrderId) {
+	public void verifyProductCancellation() {
 		OrderCancellationPage orderCancellationPage = new OrderCancellationPage();
-		orderCancellationPage.orderCancellation(OrderId);
+		orderCancellationPage.orderCancellation("order_987684");
 	}
 	
 	@Test

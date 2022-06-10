@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import pages.OrderHistoryPage;
 
-public class OrderHistroyTest extends BaseTest{
+public class OrderHistoryTest extends BaseTest{
 
 	@Test
 	public void viewOrderHistory() {
