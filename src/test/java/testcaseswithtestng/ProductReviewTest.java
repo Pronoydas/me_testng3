@@ -1,20 +1,24 @@
 package testcaseswithtestng;
 
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import pages.ProductReviewPage;
 
 public class ProductReviewTest extends BaseTest{
-
+    @Parameters("review")
 	@Test
-	public void verifyAddingReview() {
+	public void verifyAddingReview(@Optional("Good") String review) {
 		ProductReviewPage productReviewPage = new ProductReviewPage();
-		productReviewPage.addProductReview("Good");
+		productReviewPage.addProductReview(review);
 	}
 	
 	@Test
-	public void verifyEditReview() {
+	@Parameters({"review","a"})
+	public void verifyEditReview(@Optional("Excellent") String review,@Optional("hello") String a) {
 		ProductReviewPage productReviewPage = new ProductReviewPage();
-		productReviewPage.editProductReview("Excellent");
+		productReviewPage.editProductReview(review);
+
 	}
 }

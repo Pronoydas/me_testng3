@@ -21,6 +21,8 @@ public class PaymentTest extends BaseTest{
 		creditCartDetails.put("amount", "1200");
 		paymentPage.payByCreditCard(creditCartDetails);
 		paymentPage.getCreditCardDetails();
+		Assert.assertEquals(paymentPage.CreditCardDetails, creditCartDetails);
+
 	}
 	
 	@Test

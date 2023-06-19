@@ -28,7 +28,7 @@ dependencies {
 }
 
 // Additional config for Crio workspace
-buildDir = '/tmp/external_build'
+//buildDir = 'src/test/java/TestNG_Report'
 
 // task startScript(type:Exec) {
 //     commandLine '../selenium-run.sh'
@@ -39,7 +39,14 @@ buildDir = '/tmp/external_build'
 // test.dependsOn startScript
 
 test {
-    useTestNG()
+
+    useTestNG(){
+        suites "src/test/java/testNG1.xml"
+        useDefaultListeners = true
+        outputDirectory = file{"src/test/java/TestNG_Report"}
+    }
+
+
 
       afterSuite { desc, result ->
             if (!desc.parent) {

@@ -3,7 +3,7 @@ package pages;
 import java.util.Map;
 
 public class PaymentPage {
-	Map<String,String> CreditCardDetails ;
+	public Map<String,String> CreditCardDetails ;
 	Map<String,String> DebitCardDetails ;
 
 	public void launchBrowser() {
@@ -21,6 +21,7 @@ public class PaymentPage {
 		System.out.println("Entering cvv : " +cardDetails.get("cvv"));
 		System.out.println("Entering amount : " +cardDetails.get("amount"));
 		System.out.println("Payment done successfully.");
+
 	}
 	
 	public void payByDebitCard(Map<String,String> cardDetails) {
